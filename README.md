@@ -4,6 +4,10 @@
 
 ## Sobre o projeto
 
+O vídeo a seguir apresenta uma expplicação breve sobre o projeto.
+
+> 
+> ...
 
 
 ## Colaboradores
@@ -18,6 +22,7 @@
 <a href="https://github.com/marlongarrido7"><img src="https://avatars.githubusercontent.com/u/191592819?v=4" title="marlongarrido7" width="50" height="50"></a>
 <a href="https://github.com/cleberspjr"><img src="https://avatars.githubusercontent.com/u/60116794?v=4" title="cleberspjr" width="50" height="50"></a>
 <a href="https://github.com/engleonardorodrigues"><img src="https://avatars.githubusercontent.com/u/29001300?v=4" title="engleonardorodrigues" width="50" height="50"></a>
+<a href="https://github.com/ricardorodriguespes17"><img src="https://avatars.githubusercontent.com/u/39037180?v=4" title="ricardorodriguespes17" width="50" height="50"></a>
 
 
 ## Funcionalidades
