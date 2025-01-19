@@ -5,6 +5,7 @@
 const uint8_t row_pins[4] = {8, 7, 6, 5};  // Pinos das linhas do teclado
 const uint8_t col_pins[4] = {4, 3, 2, 28}; // Pinos das colunas do teclado
 
+
 // Matriz de teclas
 const char keys[4][4] = {
     {'1', '2', '3', 'A'},
