@@ -59,7 +59,7 @@ Para o desenvolvimento deste projeto, os seguintes componentes foram utilizados:
 - 1 buzzer piezoelétrico;
 - 1 Raspberry Pi Pico W.
 
-A Figura 3 apresenta o circuito implementado por meio da ferramenta de simulação Wokwi para VSCode.
+A Figura 3 apresenta o circuito implementado por meio da ferramenta de simulação Wokwi para VSCode. Por sua vez, Figura 4 lista a relação dos pinos utilizados para cada um dos componentes.
 
 <div align="center">
   <figure>  
@@ -74,9 +74,23 @@ A Figura 3 apresenta o circuito implementado por meio da ferramenta de simulaç�
   </figure>
 </div>
 
+
+<div align="center">
+  <figure>  
+    <img src="docs/pinos.png" width="600px">
+    <figcaption>
+      <p align="center"> 
+
+**Figura 4** - Relação de pinos utilizados
+
+</p>
+    </figcaption>
+  </figure>
+</div>
+
 ## Arquitetura do projeto
 
-A Figura 4 apresenta o diagrama em blocos da arquitetura do projeto. O software embarcado conta com três blocos principais para o genrenciamento dos componentes eletrônicos: gerenciamento do LED RGB, gerenciamento do buzzer piezoelétrico e gerenciamento do teclado matricial. Cada uma deltes blocos utiliza a [Raspberry Pi SDK](https://github.com/raspberrypi/pico-sdk) para realizar a comunicação com a plataforma Raspberry Pi Pico W e os respectivos componentes conectados a ela.
+A Figura 5 apresenta o diagrama em blocos da arquitetura do projeto. O software embarcado conta com três blocos principais para o genrenciamento dos componentes eletrônicos: gerenciamento do LED RGB, gerenciamento do buzzer piezoelétrico e gerenciamento do teclado matricial. Cada uma deltes blocos utiliza a [Raspberry Pi SDK](https://github.com/raspberrypi/pico-sdk) para realizar a comunicação com a plataforma Raspberry Pi Pico W e os respectivos componentes conectados a ela.
 
 
 <div align="center">
@@ -85,14 +99,14 @@ A Figura 4 apresenta o diagrama em blocos da arquitetura do projeto. O software 
     <figcaption>
       <p align="center"> 
 
-**Figura 4** - Diagrama em blocos do projeto
+**Figura 5** - Diagrama em blocos do projeto
 
 </p>
     </figcaption>
   </figure>
 </div>
 
-A Figura 5 apresenta o fluxograma simplificado do software embarcado implementado. Primeiramente, os pinos utilizados para o controle dos componentes eletrônicos são inicializados e configurados. Após, a rotina de detecção de teclas pressionadas é iniciada. Caso um pressionamento seja identificado, a respectiva rotina de acionamento é executada e, em seguida o programa retorna para a rotina de leitura de teclas. Caso contrário, o programa reinicia o processo de detecção. A fim de corrigir o fenômeno de bouncing das teclas, um atraso de 200 ms foi adicionado ao loop mais externo do programa (loop principal).
+A Figura 6 apresenta o fluxograma simplificado do software embarcado implementado. Primeiramente, os pinos utilizados para o controle dos componentes eletrônicos são inicializados e configurados. Após, a rotina de detecção de teclas pressionadas é iniciada. Caso um pressionamento seja identificado, a respectiva rotina de acionamento é executada e, em seguida o programa retorna para a rotina de leitura de teclas. Caso contrário, o programa reinicia o processo de detecção. A fim de corrigir o fenômeno de bouncing das teclas, um atraso de 200 ms foi adicionado ao loop mais externo do programa (loop principal).
 
 <div align="center">
   <figure>  
@@ -100,7 +114,7 @@ A Figura 5 apresenta o fluxograma simplificado do software embarcado implementad
     <figcaption>
       <p align="center"> 
 
-**Figura 5** - Fluxograma simplificado do software implementado
+**Figura 6** - Fluxograma simplificado do software implementado
 
 </p>
     </figcaption>
