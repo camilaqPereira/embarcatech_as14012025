@@ -19,13 +19,6 @@
 <a href="https://github.com/cleberspjr"><img src="https://avatars.githubusercontent.com/u/60116794?v=4" title="cleberspjr" width="50" height="50"></a>
 <a href="https://github.com/engleonardorodrigues"><img src="https://avatars.githubusercontent.com/u/29001300?v=4" title="engleonardorodrigues" width="50" height="50"></a>
 
-## Componentes utilizados
-
-- 1 LED RGB
-- 1 teclado matricial 4x4
-- 1 buzzer piezoelétrico
-- 1 Raspberry Pi Pico W
-
 
 ## Funcionalidades
 
@@ -57,10 +50,33 @@ A partir do teclado matricial, pode-se controlar o LED RGB e o buzzer piezoelét
   </figure>
 </div>
 
+## Circuito implementado
+
+Para o desenvolvimento deste projeto, os seguintes componentes foram utilizados:
+- 1 LED RGB;
+- 3 resistores de 220 ohm;
+- 1 teclado matricial 4x4;
+- 1 buzzer piezoelétrico;
+- 1 Raspberry Pi Pico W.
+
+A Figura 3 apresenta o circuito implementado por meio da ferramenta de simulação Wokwi para VSCode.
+
+<div align="center">
+  <figure>  
+    <img src="docs/circuito.png" width="600px">
+    <figcaption>
+      <p align="center"> 
+
+**Figura 3** - Circuito implementado no Wokwi para VSCode
+
+</p>
+    </figcaption>
+  </figure>
+</div>
 
 ## Arquitetura do projeto
 
-A Figura 3 apresenta o diagrama em blocos da arquitetura do projeto. O software embarcado conta com três blocos principais para o genrenciamento dos componentes eletrônicos: gerenciamento do LED RGB, gerenciamento do buzzer piezoelétrico e gerenciamento do teclado matricial. Cada uma deltes blocos utiliza a [Raspberry Pi SDK](https://github.com/raspberrypi/pico-sdk) para realizar a comunicação com a plataforma Raspberry Pi Pico W e os respectivos componentes conectados a ela.
+A Figura 4 apresenta o diagrama em blocos da arquitetura do projeto. O software embarcado conta com três blocos principais para o genrenciamento dos componentes eletrônicos: gerenciamento do LED RGB, gerenciamento do buzzer piezoelétrico e gerenciamento do teclado matricial. Cada uma deltes blocos utiliza a [Raspberry Pi SDK](https://github.com/raspberrypi/pico-sdk) para realizar a comunicação com a plataforma Raspberry Pi Pico W e os respectivos componentes conectados a ela.
 
 
 <div align="center">
@@ -69,14 +85,14 @@ A Figura 3 apresenta o diagrama em blocos da arquitetura do projeto. O software 
     <figcaption>
       <p align="center"> 
 
-**Figura 3** - Diagrama em blocos do projeto
+**Figura 4** - Diagrama em blocos do projeto
 
 </p>
     </figcaption>
   </figure>
 </div>
 
-A Figura 4 apresenta o fluxograma simplificado do software embarcado implementado. Primeiramente, os pinos utilizados para o controle dos componentes eletrônicos são inicializados e configurados. Após, a rotina de detecção de teclas pressionadas é iniciada. Caso um pressionamento seja identificado, a respectiva rotina de acionamento é executada e, em seguida o programa retorna para a rotina de leitura de teclas. Caso contrário, o programa reinicia o processo de detecção. A fim de corrigir o fenômeno de bouncing das teclas, um atraso de 200 ms foi adicionado ao loop mais externo do programa (loop principal).
+A Figura 5 apresenta o fluxograma simplificado do software embarcado implementado. Primeiramente, os pinos utilizados para o controle dos componentes eletrônicos são inicializados e configurados. Após, a rotina de detecção de teclas pressionadas é iniciada. Caso um pressionamento seja identificado, a respectiva rotina de acionamento é executada e, em seguida o programa retorna para a rotina de leitura de teclas. Caso contrário, o programa reinicia o processo de detecção. A fim de corrigir o fenômeno de bouncing das teclas, um atraso de 200 ms foi adicionado ao loop mais externo do programa (loop principal).
 
 <div align="center">
   <figure>  
@@ -84,9 +100,10 @@ A Figura 4 apresenta o fluxograma simplificado do software embarcado implementad
     <figcaption>
       <p align="center"> 
 
-**Figura 3** - Fluxograma simplificado do software implementado
+**Figura 5** - Fluxograma simplificado do software implementado
 
 </p>
     </figcaption>
   </figure>
 </div>
+
