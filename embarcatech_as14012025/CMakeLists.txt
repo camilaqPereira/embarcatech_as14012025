@@ -55,7 +55,7 @@ target_include_directories(embarcatech_as14012025 PRIVATE
 
 # Add any user requested libraries
 target_link_libraries(embarcatech_as14012025 
-        
+        hardware_pwm
         )
 
 pico_add_extra_outputs(embarcatech_as14012025)
