@@ -67,6 +67,11 @@ void leds_configure_output(bool red_active, bool green_active, bool blue_active)
     gpio_put(LED_BLUE_PIN, blue_active);
 }
 
+/*
+*   @brief Funcao utilizada par piscar o LED RGB cinco vezes de acordo com a cor selecionada
+*   no padrão binário
+*   @param led_sequency - sequencia binaria da cor selecionada
+*/
 int leds_blink(uint led_sequency){
     
     if (led_sequency > 7) return -1;
@@ -118,8 +123,9 @@ void buzzer_play(uint32_t duration){
     sleep_ms(duration);
     pwm_set_gpio_level(BUZZER_PIN, 0);
 }
-
-// Inicializa os pinos do teclado matricial
+/*
+*   @brief Funcao para inicializacao dos pinos do teclado matricial
+*/
 void keypad_init() {
     for (int i = 0; i < 4; i++) {
         // Configura os pinos das linhas como saída
@@ -134,7 +140,11 @@ void keypad_init() {
     }
 }
 
-// Detecta a tecla pressionada
+/*
+*   @brief Funcao para leitura do teclado matricial e deteccao do pressionamento de teclas
+*   @param pressed_key ponteiro char para o retorno da tecla pressionada
+*/
+
 void keypad_get_pressed_key(char *pressed_key) {
     for (int row = 0; row < 4; row++) {
         gpio_put(row_pins[row], 0); // Ativar linha
