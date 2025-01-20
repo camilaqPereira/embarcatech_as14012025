@@ -6,8 +6,8 @@
 
 O vídeo a seguir apresenta uma expplicação breve sobre o projeto.
 
-> 
-> ...
+> [Vídeo de descrição do projeto. Disponível no Youtube](https://youtu.be/8F8aT2OR_T8)
+
 
 
 ## Colaboradores
